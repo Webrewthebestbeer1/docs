@@ -85,8 +85,9 @@
 \centering
 \vspace*{9cm}
 \par\normalfont\fontsize{35}{35}\sffamily\selectfont
-Brew Master 9000\\
-Hardware\par % Book title
+\Huge Brew Master 9000\\
+Hardware\\
+\textit{Research and reference}\par % Book title
 \vspace*{1cm}
 {\Large Iver Egge\\
 Kristoffer Dalby\\
@@ -176,6 +177,8 @@ These fittings should not be over tightened as this will ruin the compression ri
 
 \section{Valves}\index{Valves}
 
+Any normal ball valve will work in a brewing system. Only full port ball valves have the same size hole in the ball as the pipeline.
+
 It should be possible to dissassemble the valves for cleaning and repair. Therefore 3-part valves are recommended for a brewing system.
 
 %----------------------------------------------------------------------------------------
@@ -212,159 +215,40 @@ The pump should be mounted so that liquid enters at the bottom of the head and e
 
 Many pumps require that there is pressure at the inlet. Therefore it should be mounted as far as possible below the source of liquid.
 
-%------------------------------------------------
-
-\section{Definitions}\index{Definitions}
-
-This is an example of a definition. A definition could be mathematical or it could define a concept.
-
-\begin{definition}[Definition name]
-Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
-\begin{align}
-& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
-& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
-& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
-\end{align}
-\end{definition}
-
-%------------------------------------------------
-
-\section{Notations}\index{Notations}
-
-\begin{notation}
-Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
-\begin{enumerate}
-\item Bounded support $G$;
-\item Infinitely differentiable;
-\end{enumerate}
-a vector space is denoted by $\mathcal{D}(G)$. 
-\end{notation}
-
-%------------------------------------------------
-
-\section{Remarks}\index{Remarks}
-
-This is an example of a remark.
-
-\begin{remark}
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{remark}
-
-%------------------------------------------------
-
-\section{Corollaries}\index{Corollaries}
-
-This is an example of a corollary.
-
-\begin{corollary}[Corollary name]
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{corollary}
-
-%------------------------------------------------
-
-\section{Propositions}\index{Propositions}
-
-This is an example of propositions.
-
-\subsection{Several equations}\index{Propositions!Several Equations}
-
-\begin{proposition}[Proposition name]
-It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{proposition}
-
-\subsection{Single Line}\index{Propositions!Single Line}
-
-\begin{proposition} 
-Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
-\end{proposition}
-
-%------------------------------------------------
-
-\section{Examples}\index{Examples}
-
-This is an example of examples.
-
-\subsection{Equation and Text}\index{Examples!Equation and Text}
-
-\begin{example}
-Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-\begin{equation}
-f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-\end{equation}
-The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
-\end{example}
-
-\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
-
-\begin{example}[Example name]
-\lipsum[2]
-\end{example}
-
-%------------------------------------------------
-
-\section{Exercises}\index{Exercises}
-
-This is an example of an exercise.
-
-\begin{exercise}
-This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
-
-%------------------------------------------------
-
-\section{Problems}\index{Problems}
-
-\begin{problem}
-What is the average airspeed velocity of an unladen swallow?
-\end{problem}
-
-%------------------------------------------------
-
-\section{Vocabulary}\index{Vocabulary}
-
-Define a word to improve a students' vocabulary.
-
-\begin{vocabulary}[Word]
-Definition of word.
-\end{vocabulary}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 3
 %----------------------------------------------------------------------------------------
 
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
+\chapterimage{temp.pdf} % Chapter heading image
 
-\chapter{Presenting Information}
+\chapter{Temperature measurements}
 
-\section{Table}\index{Table}
+\section{Probes}\index{Probes}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
+There are many different temperature probes available that either communicates digitally or outputs an analog signal that can be processed for use with various microcontrollers. The most common types seem to be
+
+\begin{itemize}
+\item DS18B20 (digital, Dallas 1-wire)
+\item LM35 (analog, 0-1V)
+\item Thermocouple (analog, needs amplifier)
+\end{itemize}
+
+The DS18B20 and LM35 are quite easy to use but lacks good casings for wet use. Thermocouples are the industry standard for temperature measurements and comes in a great number of different casings. They consist of two different types of conductors that provide a voltage difference according to the temperature of the system. This voltage difference is in the order of microvolts and an amplifier is needed to read the output.
+
+\subsection{K-type thermocouples}
+
+This seems to be the most common of the thermocouples types. It consists of chromel-alumel conductors. The temperature range of the probe can be as wide as $-200\degree$C \textasciitilde $1350\degree$C.
+
+The MAX31855 is an amplifier produced by Maxim Integrated. It outputs an analog signal and requires an ADC for use with a microcontroller (or a microcontroller with an integrated ADC). There are libraries available for Ardunio and Raspberry Pi. 
 
 %------------------------------------------------
 
-\section{Figure}\index{Figure}
+\section{Placement}
 
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{placeholder}
-\caption{Figure caption}
-\end{figure}
+Liquid that is being heated does not have uniformly distributed temperature. There should be two probes per tank, and the average of the two will be the actual temperature of the system.
+If only one probe is used to measure the temperature of a tank the probe should be fitted at the middle (why?).
+
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
