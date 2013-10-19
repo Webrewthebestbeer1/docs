@@ -49,6 +49,7 @@
 \definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
 
 \newcommand{\degree}{\ensuremath{^\circ}}
+\usepackage{wrapfig}
 
 % Font Settings
 \usepackage{avant} % Use the Avantgarde font for headings
@@ -172,7 +173,8 @@ A stiff gasket that is not sticky will allow you to turn the fitting without dis
 
 \section{Compression fittings}\index{Compression fittings}
 
-Compression fittings consists of a compression nut and ring that slides over the tube and a threaded fitting. If the tube is made of soft metal there should also be a support insert that is inserted into the tube to prevent it from collapsing.\\
+Compression fittings consists of a compression nut and ring that slides over the tube and a threaded fitting. If the tube is made of soft metal there should also be a support insert that is inserted into the tube to prevent it from collapsing.
+
 These fittings should not be over tightened as this will ruin the compression ring and therefore the seal.
 
 \section{Valves}\index{Valves}
@@ -223,9 +225,11 @@ Cavitation is the formation of vapor cavities in a liquid due to pressure differ
 
 \chapterimage{temp.pdf} % Chapter heading image
 
-\chapter{Temperature measurements}
+\chapter{Sensors and input}
 
-\section{Probes}\index{Probes}
+\section{Temperature measurements}
+
+\subsection{Probes}\index{Probes}
 
 There are many different temperature probes available that either communicates digitally or outputs an analog signal that can be processed for use with various microcontrollers. The most common types seem to be
 
@@ -237,18 +241,33 @@ There are many different temperature probes available that either communicates d
 
 The DS18B20 and LM35 are quite easy to use but lacks good casings for wet use. Thermocouples are the industry standard for temperature measurements and comes in a great number of different casings. They consist of two different types of conductors that provide a voltage difference according to the temperature of the system. This voltage difference is in the order of microvolts and an amplifier is needed to read the output.
 
-\subsection{K-type thermocouples}
+\subsubsection{DS18B20}
 
-This seems to be the most common of the thermocouples types. It consists of chromel-alumel conductors. The temperature range of the probe can be as wide as $-200\degree$C \textasciitilde $1350\degree$C.
+The DS18B20 comes in a standarized TO-92 packaging. It communicates over the Dallas 1-wire bus that enables several sensors to share a dataline. They can also source power from the dataline so that only two wires are needed for the entire sensor-array.
+The temperature range of this sensor is $-55\degree$C \textasciitilde $125\degree$C and it provides an accuracy of $\pm$ $0.5\degree$C in the $-10\degree$C \textasciitilde $85\degree$C range.
 
-The MAX31855 is an amplifier produced by Maxim Integrated. It outputs an analog signal and requires an ADC for use with a microcontroller (or a microcontroller with an integrated ADC). There are libraries available for Ardunio and Raspberry Pi. 
+\subsubsection{Thermocouples}
 
-%------------------------------------------------
+Thermocouples consists of two conductors that differ in physical properties. When these two conductors contact each other they produce a voltage proportional to the temperature difference.
 
-\section{Placement}
+The main dissadvantage of thermocouples is that a system error of less than one degree Kelvin is difficult to achieve.
+
+\subsubsection{K-type thermocouple and amplifier}
+
+This seems to be the most common probe of the thermocouples types. It consists of chromel-alumel conductors. The temperature range of the probe can be as wide as $-200\degree$C \textasciitilde $1350\degree$C.
+
+The MAX31855 is an amplifier for thermocouples produced by Maxim Integrated. It outputs an analog signal and requires an ADC for use with a microcontroller (or a microcontroller with an integrated ADC). There are libraries available for the Ardunio and the Raspberry Pi. 
+
+\subsection{Placement}
 
 Liquid that is being heated does not have uniformly distributed temperature. There should be two probes per tank, and the average of the two will be the actual temperature of the system.
 If only one probe is used to measure the temperature of a tank the probe should be fitted at the middle (why?).
+
+\section{Flow sensors / Flow meter}
+
+A flow sensor can essensially be as simple as a fan that is rotated by the moving liquid. A magnet on the fan axel moves past a magnetic sensor and produces an electronic pulse on the output line. A microcontroller then records these pulses and is able to calculate the volume of liquid that has passed through the sensor.
+
+These simple flow sensors comes in different volume per time ratings. 
 
 %----------------------------------------------------------------------------------------
 
@@ -276,6 +295,8 @@ A typical RIMS-tube consists of the following
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
+
+\chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \chapter*{Bibliography}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}}
