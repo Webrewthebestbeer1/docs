@@ -293,7 +293,13 @@ Zero crossing means that the relay switches from the conducting to the non-condu
 
 \subsection{Calculating heatsink requirements for SSR}
 
+SSR's generally produce about 1W of heat for every ampere of the load.
+
 \subsection{Thermal pads and compound}
+
+Thermal pads or thermal compound should always be used when connecting a SSR to a heatsink.
+
+As tiny irregularities in the flat, metal surface of the SSR and heatsink provide trapped air and thus insulation, thermal pads or compound is used to fill in these irregularities. If compound is used, only a very thin film is necessary to provide good thermal conductivity.
 
 %----------------------------------------------------------------------------------------
 
@@ -324,6 +330,62 @@ A typical RIMS-tube consists of the following
 \chapter{Tanks, vessels and kettles}
 
 \section{Volumes}
+
+The following equations for volumes do not take into consideration other objects in the tanks, such as filters and stirrers. They instead give the minimum volume of the containers. Headspace and other objects should also be included in the final volume of the tanks.
+
+\subsection{Hot Liquor Tun (HLT)}
+
+This tank provides hot water for the mash and sparge. It has a heating element installed in the tank and uses the RIMS-tube for additional power when heating the mash water.
+
+It's volume should be at least that of the needed mash water for the brew. This is calculated as follows
+
+\begin{equation}
+V_{HLT} = m_{malt} \cdot d_{malt} \cdot {379 \over 400}
+%\label{Volume of mash water based on weight of malt and malt thickness}
+\end{equation}
+
+Where d$_{malt}$ is the thickness of the malt and is generally set to 2.61 $L\over kg $.
+
+\subsection{Mash/Lauter Tun (MLT)}
+
+This tank is where the malt is mashed at a constant or several, precise temperatures (step mashing). To keep the temperature constant, or to rise the temperature, the wort is passed through the RIMS-tube which heats the wort. The tank should also be very well insulated.
+
+It's volume is calculated as follows
+
+\begin{equation}
+V_{MLT} = m_{malt} \cdot (0.67 + d_{malt})
+\end{equation}
+
+\subsection{Boil Kettle (BK)}
+
+This tank is where the wort is boiled with the addition of hops. It has two heating elements installed in the tank and has an outlet to a chiller.
+
+It's volume should be that of the wort produced for pre-boil and as a rule of thumb have a 20\% head room to compensate for foam and splash.
+
+\begin{equation}
+V_{wort, pre-boil} = {{V_{beer} + V_{hops, absorbed}} \over 0.96} \cdot {1 \over k_{evap}}
+\end{equation}
+
+Where k$_{evap}$ is the evaporisationcoefficient which is based on the power from the heating elements and the surface area of the top of the kettle. It is generally set to 0.95. V$_{hops, absorbed}$ is the volume of wort that is absorbed by the hops and is dependent on the amount of hops. 100g of hops will probably absorb 1L of wort.
+
+The total volume of the boil kettle should then be
+
+\begin{equation}
+V_{BK} = V_{wort, pre-boil} \cdot 1.2
+\end{equation}
+
+\section{Insulation}
+
+The formula for calculating heat loss based on insulation is
+
+\begin{equation}
+H = {{A (T_h - T_c)} \over R}
+\end{equation}
+
+Where A is the surface area of the tank, T$_h$ is the temperature of the liquid in the tank and T$_c$ is the temperature of the surroundings. R is a unique value for the insulation material, where a higher R-value designates better insulation properties.\\
+
+Many insulation materials are based on trapping air in the material. Air is a very bad conductor of heat, and therefore the material insulates heat transfer. These insulation materials perform worse if they are compressed, as they can not trap enough air.
+
 
 %----------------------------------------------------------------------------------------
 
