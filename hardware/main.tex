@@ -41,7 +41,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,fleqn]{book} % Default font size and left-justified equations
+\documentclass[11pt,fleqn,openany]{book} % Default font size and left-justified equations
 
 \usepackage[top=3cm,bottom=3cm,left=3.2cm,right=3.2cm,headsep=10pt,a4paper]{geometry} % Page margins
 
@@ -187,6 +187,26 @@ Any normal ball valve will work in a brewing system. Only full port ball valves 
 
 It should be possible to dissassemble the valves for cleaning and repair. Therefore 3-part valves are recommended for a brewing system.
 
+\section{Threads}
+
+It is recommended to not combine threads of different types. A NPT male fitting will fit a BSPT female fitting, but will not make a seal.
+
+\subsection{NPT}
+
+NPT stands for National Pipe Taper. The threads are tapered so that they ''mash'' together and form a seal.
+
+\subsection{NPS / NPST}
+
+NPST stands for National Pipe Straight Thread. Unlike NPT the threads are straight and an O-ring or tape is needed to make a seal.
+
+\subsection{BSP / BSPT}
+
+BSPT stands for British Standard Pipe Thread. These threads are also tapered.
+
+\subsection{BSPP}
+
+BSPP stands for British Standard Parallel Pipe. Unlike BSP the threads are straight and an O-ring or tape is needed to make a seal.
+
 %----------------------------------------------------------------------------------------
 %	CHAPTER 2
 %----------------------------------------------------------------------------------------
@@ -224,6 +244,31 @@ Many pumps require that there is pressure at the inlet. Therefore it should be m
 \section{Cavitation}
 
 Cavitation is the formation of vapor cavities in a liquid due to pressure differences around the impeller as it turns quickly and with great force. It can be harmful to the pump and will produce a rattle-like sound.
+
+%----------------------------------------------------------------------------------------
+
+\chapterimage{heating.pdf} % Chapter heading image
+
+\chapter{Heating elements}
+
+\section{Watt density}
+
+Heating elements comes in different watt density ratings. These are
+
+\begin{itemize}
+\item Ultra Low Watt Density (50W per square inch)
+\item Low Watt Density
+\item Medium Watt Density
+\item High Watt Density\\
+\end{itemize}
+
+If the watt density is too high the wort will be scorched. Also, elements with lower watt densities tend to last longer.
+
+A typical, recommended max value for hot water heaters is 75W per square inch.
+
+\section{Threads}
+
+The standard thread for american heating elements is the 1'' NPT.
 
 %----------------------------------------------------------------------------------------
 
@@ -547,7 +592,7 @@ Screw terminals DZ39 & 50 & 9.50 & - & 9.50 \\
 \caption{Electronics materals list}
 \end{table}
 
-\section{Woodworking}
+\section{Bench}
 
 \begin{table}[h]
 \centering
@@ -561,10 +606,10 @@ Row, 48x48mm & 2x3.6 = 7.2 & 1.00 & 3.00 \\
 Plank, 19x148mm & 2x5.2 = 10.4 & 2.35 & 2.35 \\
 \bottomrule
 \end{tabular}
-\caption{Woodworking materals list}
+\caption{Bench materals list}
 \end{table}
 
-\section{Metalworking}
+\section{Tanks}
 
 \begin{table}[h]
 \centering
@@ -581,7 +626,7 @@ Sanitary end cap, fits Ø115mm ferrule & 2 & 19.98 & - & 19.98\\
 4" sanitary EPDM gasket, flanged & 2 & 4.49 & - & 4.49 \\
 \bottomrule
 \end{tabular}
-\caption{Woodworking materals list}
+\caption{Tanks materals list}
 \end{table}
 
 %----------------------------------------------------------------------------------------
