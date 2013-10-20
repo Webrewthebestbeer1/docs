@@ -574,6 +574,7 @@ Plank, 19x148mm & 10.4 & 2.35 & 2.35 \\
 \begin{figure}[h]
 \centering\includegraphics[scale=0.15]{bench_above}
 \caption{Bench, above}
+\label{bench_above}
 \end{figure}
 
 \begin{figure}[h]
@@ -581,8 +582,78 @@ Plank, 19x148mm & 10.4 & 2.35 & 2.35 \\
 \caption{Bench, below}
 \end{figure}
 
+\section{Sizes}
+
+The bench is 80cm tall, 80cm deep and 200cm wide. The feet are cut 2x40cm long.
+
+\section{Considerations}
+
+\subsection{Transportation}
+
+It should be easy to transport the bench. As it is very heavy, it is divided into two parts that each can be transported on the roof of a car. The parts of the bench will be assembled together using metal rods, according to figure \ref{bench_above}.
+
+\subsection{Surface treatment}
+
+The wood will have to be treated so that it can withstand spills of boiling wort.
+
 %----------------------------------------------------------------------------------------
-%	PART 2
+
+\chapterimage{metal.pdf} % Chapter heading image
+
+\chapter{Metalworking}
+
+\section{Tanks}
+
+All tanks are made from OSO brand hot water tanks (1977-1990 model). These come with a 50mm threaded hole for a heating element. The bottom parts of the tanks have feet.
+
+There are adapters available to reduce the 50mm hole to a standard 1" threaded hole.\\
+
+The system is sized to accomodate brewing 120L of finished beer using 48kg of malt.
+
+\subsection{HLT}
+
+The HLT is cut for a volume of 130L.
+
+It is the bottom part of an OSO brand tank and has one heating element and feet. A $1 \over 2$" hole is drilled in the bottom for draining water.  There is a $1 \over 2$" inlet on the side for return from the RIMS-tube.
+
+\subsection{MLT}
+
+The MLT is cut for a volume of 170L. 
+
+It is the top part of an OSO brand tank and has no feet. The inlet on the side is plugged with a male, threaded pipe cap.
+
+\subsection{BK}
+
+The BK is cut for a volume of approximately 190L
+
+It has feet and two heating elements. The second element is mounted as a weldless fitting.
+
+\section{Welding}
+
+A 4" sanitary ferrule is welded to the bottom of the mash / lauter tun and the boil kettle to aid in removal of spent grains and cleaning.
+
+\section{Weldless fittings}
+
+Holes are made using a step drill bit. All weldless fittings are threaded and mounted with an O-ring and nut.
+
+%----------------------------------------------------------------------------------------
+
+\chapterimage{control.pdf} % Chapter heading image
+
+\chapter{Control system}
+
+\section{Temperature measurements}
+
+\subsection{Probes}
+
+All probes are K-type thermocouples with a range of $0\degree$C \textasciitilde $400\degree$C.
+
+\subsection{Interface chip}
+
+The thermocouples are interfaced with MAX31855KASA chips. These are then read by an ATMega328p programmed with the Arduino bootloader.
+
+%----------------------------------------------------------------------------------------
+%	PART 3
 %----------------------------------------------------------------------------------------
 
 \part{Bibliography and index}
