@@ -505,7 +505,9 @@ P = V \cdot I = 230V \cdot 11.98A = 2755W
 
 \chapter{Materials List}
 
-Many of these items are purchased in larger lots than necessary. Items without a listed price where scrapped from the bin.
+Items without a listed price where scrapped from the bin or sourced for free.
+
+Many of these items are purchased in larger lots than necessary, as smaller lots could not be found.
 
 \section{RIMS-tube}
 
@@ -515,11 +517,10 @@ Many of these items are purchased in larger lots than necessary. Items without a
 \toprule
 Article & Quantity & Price / \$ & Shipping / \$ & Total / \$\\
 \midrule
-Sanitary Tee, Ø51mm pipe Ø64mm ferrule & 2 & 34.00 & 16.00 & 50.00 \\
-Sanitary End Cap, Ø64mm & 2 & 6.18 & 3.74 & 9.92 \\
-2" PTFE gasket & 6 & 12.00 & - & 12.00 \\
-2" PTFE gasket & 6 & 12.00 & - & 12.00 \\
-2" PTFE gasket & 6 & 12.00 & - & 12.00 \\
+Sanitary tee, Ø51mm pipe Ø64mm ferrule & 2 & 34.00 & 16.00 & 50.00 \\
+Sanitary end cap, Ø64mm & 2 & 6.18 & 3.74 & 9.92 \\
+2" sanitary EPDM gasket, flanged & 8 & 12.00 & - & 12.00 \\
+2" sanitary PTFE gasket & 6 & 12.00 & - & 12.00 \\
 \bottomrule
 \end{tabular}
 \caption{RIMS-tube materials list}
@@ -540,7 +541,7 @@ Capacitor, 100nF ceramic, SMD & 50 & 2.35 & - & 2.35 \\
 LM3940, SMD & 5 & 3.74 & - & 3.74 \\
 USB-B PCB headers & 10 & 1.60 & - & 1.60 \\
 Screw terminals DZ39 & 50 & 9.50 & - & 9.50 \\
-Zenerdiode & 1 & - & - & - \\
+12mm 3 pin DIN connector, screw type & 10 & 21.00 & - & 21.00 \\
 \bottomrule
 \end{tabular}
 \caption{Electronics materals list}
@@ -554,10 +555,30 @@ Zenerdiode & 1 & - & - & - \\
 \toprule
 Article & Quantity / m & Price / NOK & Total / NOK\\
 \midrule
-Two by four & 16.8 & - & - \\
-Four by four & 4.5 & 0.99 & 0.99 \\
-Row, 48x48mm & 7.2 & 1.00 & 3.00 \\
-Plank, 19x148mm & 10.4 & 2.35 & 2.35 \\
+Two by four & 4x4.2 = 16.8 & - & - \\
+Four by four & 1x4.5 = 4.5 & 0.99 & 0.99 \\
+Row, 48x48mm & 2x3.6 = 7.2 & 1.00 & 3.00 \\
+Plank, 19x148mm & 2x5.2 = 10.4 & 2.35 & 2.35 \\
+\bottomrule
+\end{tabular}
+\caption{Woodworking materals list}
+\end{table}
+
+\section{Metalworking}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{l l l l l}
+\toprule
+Article & Quantity & Price / \$ & Shipping / \$ & Total / \$\\
+\midrule
+OSO brand 200L hot water tank & 1 & - & - & - \\
+OSO brand 300L hot water tank & 1 & - & - & - \\
+Sanitary flange, Ø102mm pipe Ø115mm ferrule & 2 & 19.98 & - & 19.98 \\
+Sanitary clamp, fits Ø115mm ferrule & 2 & 37.98 & - & 37.98 \\
+Sanitary end cap, fits Ø115mm ferrule & 2 & 19.98 & - & 19.98\\
+4" sanitary PTFE gasket & 1 & 4.49 & - & 4.49 \\
+4" sanitary EPDM gasket, flanged & 2 & 4.49 & - & 4.49 \\
 \bottomrule
 \end{tabular}
 \caption{Woodworking materals list}
@@ -628,6 +649,12 @@ The BK is cut for a volume of approximately 190L
 
 It has feet and two heating elements. The second element is mounted as a weldless fitting.
 
+\subsection{Initial cleaning}
+
+The tanks are initially cleaned using diluted hydrochloric acid. This is then neutralized using dilute sodium bicarbonate to prevent the acid from etching the steel. The procedure efficiently removes calcium and iron salts.
+
+Further cleaning is performed using soap and hot water.
+
 \section{Welding}
 
 A 4" sanitary ferrule is welded to the bottom of the mash / lauter tun and the boil kettle to aid in removal of spent grains and cleaning.
@@ -636,21 +663,41 @@ A 4" sanitary ferrule is welded to the bottom of the mash / lauter tun and the b
 
 Holes are made using a step drill bit. All weldless fittings are threaded and mounted with an O-ring and nut.
 
+\section{Chiller}
+
+The chiller is a counter flow design with an inner copper tube of 6m length and an outer tube of PVC.
+
+Copper wire is coiled around and soldered to the inner tube to generate turbulence in the water stream. Soap is used as lubricant to aid in inserting the inner tube into the PVC hose.
+
+The PVC hose is connected to the tee using a hose barb. The inner tube is connected to the tee using compression fittings.
+
 %----------------------------------------------------------------------------------------
 
 \chapterimage{control.pdf} % Chapter heading image
 
 \chapter{Control system}
 
-\section{Temperature measurements}
+\section{Sensors}
 
-\subsection{Probes}
+\subsection{Flow}
+
+A flow sensor with a rating of 0-30 $L \over min$ is used to measure the volume of tap water in the HLT.
+
+\subsection{Temperature}
+
+\subsubsection{Probes}
 
 All probes are K-type thermocouples with a range of $0\degree$C \textasciitilde $400\degree$C.
 
-\subsection{Interface chip}
+\subsubsection{Interface chip}
 
-The thermocouples are interfaced with MAX31855KASA chips. These are then read by an ATMega328p programmed with the Arduino bootloader.
+The thermocouples are interfaced with MAX31855KASA chips.
+
+\section{Computers and microcontrollers}
+
+All sensors are connected to an ATMega328p programmed with the Arduino bootloader and the V-USB library. The ATMega328p then communicates over USB to a Raspberry Pi running Debian Linux. Communication by the user with the Raspberry Pi is performed over a standard ethernet LAN.
+
+
 
 %----------------------------------------------------------------------------------------
 %	PART 3
