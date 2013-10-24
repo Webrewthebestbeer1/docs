@@ -340,9 +340,17 @@ SSR's can also be switched so often they can provide a semi-correct power contro
 
 Zero crossing means that the relay switches from the conducting to the non-conducting phase when the AC sine wave reaches the zero crossing point. This reduces the surge current through the load and greatly improves the lifespan of the SSR.
 
+Zero crossing SSR's are also marked as ''Zero voltage switched'' type.
+
 \subsection{Calculating heatsink requirements for SSR}
 
 SSR's generally produce about 1W of heat for every ampere of the load.
+
+\subsubsection{Computer CPU heatsinks}
+
+The watt density of an Intel Pentium 4 CPU is about $9 {W \over {cm^2}}$.
+
+If we run a load of 15A through a SSR, that amounts to about $0.6 {W \over {cm^2}}$ (26$cm^2$ die size, 15W heat dissipation). Therefore, CPU heatsinks seem to be good candidates for use with SSR's, and can be sourced for free with almost no hassle. Whether or not these have to be used with a fan is left to experimentation.
 
 \subsection{Thermal pads and compound}
 
@@ -554,27 +562,9 @@ Items without a listed price where scrapped from the bin or sourced for free.
 
 Many of these items are purchased in larger lots than necessary, as smaller lots could not be found.
 
-\section{RIMS-tube}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l l l}
-\toprule
-Article & Quantity & Price / \$ & Shipping / \$ & Total / \$\\
-\midrule
-Sanitary tee, Ø51mm pipe Ø64mm ferrule & 2 & 34.00 & 16.00 & 50.00 \\
-Sanitary end cap, Ø64mm & 2 & 6.18 & 3.74 & 9.92 \\
-2" sanitary EPDM gasket, flanged & 8 & 12.00 & - & 12.00 \\
-2" sanitary PTFE gasket & 6 & 12.00 & - & 12.00 \\
-Sanitary sight glass, Ø51mm pipe Ø64mm ferrule & 1 & 59.99 & - & 59.99\\
-\bottomrule
-\end{tabular}
-\caption{RIMS-tube materials list}
-\end{table}
-
 \section{Electronics}
 
-\begin{table}[h]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{l l l l l}
 \toprule
@@ -589,13 +579,35 @@ USB-B PCB headers & 10 & 1.60 & - & 1.60 \\
 Screw terminals DZ39 & 50 & 9.50 & - & 9.50 \\
 12mm 3 pin DIN connector, screw type & 10 & 21.00 & - & 21.00 \\
 \bottomrule
+Total & & & & -\\
 \end{tabular}
 \caption{Electronics materals list}
 \end{table}
 
+\newpage
+
+\section{RIMS-tube}
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{l l l l l}
+\toprule
+Article & Quantity & Price / \$ & Shipping / \$ & Total / \$\\
+\midrule
+Sanitary tee, Ø51mm pipe Ø64mm ferrule & 2 & 34.00 & 16.00 & 50.00 \\
+Sanitary end cap, Ø64mm & 2 & 6.18 & 3.74 & 9.92 \\
+2" sanitary EPDM gasket, flanged & 8 & 12.00 & - & 12.00 \\
+2" sanitary PTFE gasket & 6 & 12.00 & - & 12.00 \\
+Sanitary sight glass, Ø51mm pipe Ø64mm ferrule & 1 & 59.99 & - & 59.99\\
+\bottomrule
+Total & & & & -\\
+\end{tabular}
+\caption{RIMS-tube materials list}
+\end{table}
+
 \section{Bench}
 
-\begin{table}[h]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{l l l l}
 \toprule
@@ -612,13 +624,14 @@ Nut, M10, locking & 6 & 10 & 10\\
 Nail, 3x55mm & 100 & 70 & 70\\
 Screw, 4x80mm & 50 & - & -\\
 \bottomrule
+Total & & & -\\
 \end{tabular}
 \caption{Bench materals list}
 \end{table}
 
 \section{Tanks}
 
-\begin{table}[h]
+\begin{table}[ht!]
 \centering
 \begin{tabular}{l l l l l}
 \toprule
@@ -631,7 +644,9 @@ Sanitary clamp, fits Ø115mm ferrule & 2 & 37.98 & - & 37.98 \\
 Sanitary end cap, fits Ø115mm ferrule & 2 & 19.98 & - & 19.98\\
 4" sanitary PTFE gasket & 1 & 4.49 & - & 4.49 \\
 4" sanitary EPDM gasket, flanged & 2 & 4.49 & - & 4.49 \\
+Braided stainless steel hose, 6AN OD14mm 12" & 6 & 18.66 & - & 18.66\\
 \bottomrule
+Total & & & & -\\
 \end{tabular}
 \caption{Tanks materals list}
 \end{table}
