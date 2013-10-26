@@ -175,6 +175,10 @@ A normal gasket will fall right of the fitting when loose. If the gasket has a f
 
 A stiff gasket that is not sticky will allow you to turn the fitting without dissassembling the entire connection. Stiffer gaskets will need more compression to provide a good seal.
 
+\subsubsection{Lubrication of gaskets}
+
+Silicone and rubber gaskets need to be lubricated in order to not dry out. Food grade lubricants are, of course, mandatory. Only a thin film of lubricant is needed, enough to seal the moisture in the gasket.
+
 \section{Compression fittings}\index{Compression fittings}
 
 Compression fittings consists of a compression nut and ring that slides over the tube and a threaded fitting. If the tube is made of soft metal there should also be a support insert that is inserted into the tube to prevent it from collapsing.
@@ -189,7 +193,7 @@ It should be possible to dissassemble the valves for cleaning and repair. Theref
 
 \section{Threads}
 
-It is recommended to not combine threads of different types. A NPT male fitting will fit a BSPT female fitting, but will not make a seal.
+It is recommended to not combine threads of different types. A NPT male fitting will fit a BSPT female fitting (both tapered), but will not make a seal.
 
 \subsection{NPT}
 
@@ -229,7 +233,7 @@ A suitable pump for a brewing system have the following requirements
 
 \section{Priming}\index{Pump!Priming}
 
-Priming is to fill the pump head with the liquid that is to be pumped. As the pump is stored dry, the contents of the pump head is only air. As air and water have very different physical properties, a pump that is designed to pump a liquid will perform terrible at pumping air and will eventually break.\\
+Priming is to fill the pump head with the liquid that is to be pumped. As the pump is stored dry, the contents of the pump head when it is turned on is only air. As air and water have very different physical properties, a pump that is designed to pump a liquid will perform terrible at pumping air and will eventually break.\\
 
 A self-priming pump differs from a non-priming pump that it can pump a mixture of air and liquid. This means that the pump will be able to remove air trapped in the head as long as it has a source of liquid.\\
 
@@ -244,6 +248,18 @@ Many pumps require that there is pressure at the inlet. Therefore it should be m
 \section{Cavitation}
 
 Cavitation is the formation of vapor cavities in a liquid due to pressure differences around the impeller as it turns quickly and with great force. It can be harmful to the pump and will produce a rattle-like sound.
+
+\section{Brands}
+
+The most common brands of pumps used in amateur brewing seem to be (listed by cost, cheapest at the top)
+
+\begin{itemize}
+\item Chugger
+\item March
+\item Little Giant\\
+\end{itemize}
+
+Chugger pumps used for brewing are very identical to the March pumps, but seem to use an inferior manufacture process. They, however, give the most ''bang for the bucks''. March pumps are the ''true and tested'', especially the March 809. Little Giant provide excellent quality and produce very little noise compared to the other two brands.
 
 %----------------------------------------------------------------------------------------
 
@@ -268,7 +284,7 @@ A typical, recommended max value for hot water heaters is 75W per square inch.
 
 \section{Threads}
 
-The standard thread for american heating elements is the 1'' NPT.
+The standard thread for american heating elements (the ones commonly found on eBay) is the 1'' NPT.
 
 %----------------------------------------------------------------------------------------
 
@@ -286,6 +302,7 @@ There are many different temperature probes available that either communicates d
 \item DS18B20 (digital, Dallas 1-wire)
 \item LM35 (analog, 0-1V)
 \item Thermocouple (analog, needs amplifier)
+\item Resistance thermometer (analog)
 \end{itemize}
 
 The DS18B20 and LM35 are quite easy to use but lacks good casings for wet use. Thermocouples are the industry standard for temperature measurements and comes in a great number of different casings. They consist of two different types of conductors that provide a voltage difference according to the temperature of the system. This voltage difference is in the order of microvolts and an amplifier is needed to read the output.
@@ -301,11 +318,17 @@ Thermocouples consists of two conductors that differ in physical properties. Whe
 
 The main dissadvantage of thermocouples is that a system error of less than one degree Kelvin is difficult to achieve.
 
-\subsubsection{K-type thermocouple and amplifier}
+\subsubsection{K-type thermocouple and interface}
 
-This seems to be the most common probe of the thermocouples types. It consists of chromel-alumel conductors. The temperature range of the probe can be as wide as $-200\degree$C \textasciitilde $1350\degree$C.
+The K-type thermocouple seems to be the most common probe of the thermocouples types. It consists of chromel-alumel conductors. The temperature range of the probe can be as wide as $-200\degree$C \textasciitilde $1350\degree$C.
 
-The MAX31855 is an amplifier for thermocouples produced by Maxim Integrated. It outputs an analog signal and requires an ADC for use with a microcontroller (or a microcontroller with an integrated ADC). There are libraries available for the Ardunio and the Raspberry Pi. 
+The MAX31855 is an interface for thermocouples produced by Maxim Integrated. It communicates its output using the SPI protocol. There are libraries available for the Ardunio and the Raspberry Pi. 
+
+\subsubsection{Resistance thermometers}
+
+Resistance thermometers works by running a voltage through a pure metal that has a resistance that varies by the temperature. The voltage difference between input and output is used to calculate the temperature. As the difference can be quite small at low voltages, an amplifier is often used.
+
+These probes offer greater accuracy than termocouples but are limited to applications where the temperature will not exceed $600\degree$C. They also drift less than thermocouples and do not need to be calibrated as often. (do thermocouples need to be calibrated when used with an interface chip??)
 
 \subsection{Placement}
 
@@ -369,6 +392,10 @@ As tiny irregularities in the flat, metal surface of the SSR and heatsink provid
 RIMS stands for Recirculating Infusion Mash System.\\
 The wort is recirculated continously through the malt. The RIMS-tube contains a heating element and a temperature probe that enables the brewer to do step mashing by pumping the wort through the tube. RIMS also provides crystal clear wort as the wort is filtered throughout the entire mashing process.
 
+\section{Usage}
+
+The RIMS-tube, in essence, provides heating of liquid. It can be used to heat mash water, compensate for heat loss during mashing and for raising the temperature of the mash for step mashing. 
+
 \section{Components}
 
 A typical RIMS-tube consists of the following
@@ -378,6 +405,7 @@ A typical RIMS-tube consists of the following
 \item A heating element adapter and heating element
 \item A temperature probe adapater and temperature probe
 \item Two hose/pipe connections
+\item Sight glass (Optional; it's just very, very cool and provides additional length to the tube)
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -576,7 +604,7 @@ Capacitor, 0.47 $\mu$F mylar & 50 & 1.00 & 2.00 & 3.00 \\
 Capacitor, 100nF ceramic, SMD & 50 & 2.35 & - & 2.35 \\
 LM3940, SMD & 5 & 3.74 & - & 3.74 \\
 USB-B PCB headers & 10 & 1.60 & - & 1.60 \\
-Screw terminals DZ39 & 50 & 9.50 & - & 9.50 \\
+Screw terminals, DZ39 & 50 & 9.50 & - & 9.50 \\
 12mm 3 pin DIN connector, screw type & 10 & 21.00 & - & 21.00 \\
 SOIC8 to DIP8 PCB & 20 & 3.49 & - & 3.49 \\
 4N35 optocoupler & 10 & 2.40 & - & 2.40 \\
@@ -749,11 +777,29 @@ The PVC hose is connected to the tee using a hose barb. The inner tube is connec
 
 \chapter{Control system}
 
+\section{PCB's}
+
+An inital attempt at placing all the components on a single PCB resulted in a messy PCB with lots of airwires. The circuit is therefore divided into three parts
+
+\begin{itemize}
+\item Mainboard, containing the Arduino, the USB interface and a programming header
+\item Relay interface, containing optocouplers and screw terminals
+\item Thermocouple interface, containing a voltage regulator, level switching, interface chips and screw terminals
+\end{itemize}
+
+\section{Relays}
+
+The price difference of SSR's and mechanical relays is close to none, and as SSR's are quiet and require almost no addition electronics all the relays in this system are of solid state type.
+
+The SSR's that are going to do power width modulation are of recognized brands. The SSR's that are used to only turn on and off i.e. the pump are of generic eBay brands.
+
 \section{Sensors}
 
 \subsection{Flow}
 
 A flow sensor with a rating of 0-30 $L \over min$ is used to measure the volume of tap water in the HLT.
+
+The flow rating of tap water in Trondheim, Norway is on average about 15 $L \over min$. The sensor is chosen closest to this rating as a sensor with a wider rating is thought to be less accurate.
 
 \subsection{Temperature}
 
@@ -769,6 +815,23 @@ The thermocouples are interfaced with MAX31855KASA chips.
 
 All sensors are connected to an ATMega328p programmed with the Arduino bootloader and the V-USB library. The ATMega328p then communicates over USB to a Raspberry Pi running Debian Linux. Communication by the user with the Raspberry Pi is performed over a standard ethernet LAN.
 
+\subsection{5V to 3.3V level conversion}
+
+The MAX31855KASA chips are operated at 3.3V, while the Arduino and SSR's will be operated at 5V. Level conversion is done by following Adafruits design of their MAX31855 breakout board.
+
+A switching diode is placed wih the cathode connected to the output of the interface chip. The anode is connected to an input on the microcontroller. A resistor in series with a 3.3V supply is wired in parallel to this diode. When the microcontroller is outputting a digital zero, the anode of the diode is connected to ground and the path of shortest resistance from the interface chips input is ground. As the microcontroller outputs a digital one, the diode works as an off switch that disconnects the microcontroller and interface chip. The interface chip then gets fed 3.3V through the resistor.
+
+According to the datasheet of the ATMega328p, the ''I/O pin input threshold voltage'' at $V_{cc} = 5V$ is about 2.6V. An input of 3.3V is therefore registered as a digital one.
+
+%ref: http://www.atmel.com/Images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet.pdf
+
+\subsection{Schematic}
+
+\begin{figure}[h]
+\centering\includegraphics[scale=0.5]{mainboard_schem}
+\caption{Schematic, mainboard}
+\label{mainboard_schem}
+\end{figure}
 
 
 %----------------------------------------------------------------------------------------
@@ -791,6 +854,11 @@ All sensors are connected to an ATMega328p programmed with the Arduino bootloade
 \section*{Articles}
 \addcontentsline{toc}{section}{Articles}
 \printbibliography[heading=bibempty,type=article]
+\section*{Manuals}
+\addcontentsline{toc}{section}{Manuals}
+\printbibliography[heading=bibempty,type=manual]
+
+
 
 %----------------------------------------------------------------------------------------
 %	INDEX
